@@ -2,42 +2,42 @@ const enhancer = require('./enhancer.js');
 // test away!
 
 const item1 = {
-    name: "Gun",
+    name: "Handgun",
     durability: 50,
     enhancement: 7,
   };
   const item2 = {
-    name: "Knife",
+    name: "Light Machine Gum",
     durability: 50,
     enhancement: 10,
   };
   const item3 = {
-    name: "Bat",
+    name: "Assult Rifle",
     durability: 70,
     enhancement: 20,
   };
   const item4 = {
-    name: "Pipe",
+    name: "Shotgun",
     durability: 70,
     enhancement: 20,
   };
   const item5 = {
-    name: "Mace",
+    name: "Sub Machine Gun",
     durability: 70,
     enhancement: 7,
   };
   const item6 = {
-    name: "Supercharge",
+    name: "Designated Marksman Rifle",
     durability: 70,
     enhancement: 20,
   };
   const item7 = {
-    name: "Powerup",
+    name: "Sniper Rifle",
     durability: 20,
     enhancement: 0,
   };
   const item8 = {
-    name: "Sword",
+    name: "Rocket Launcher",
     durability: 20,
     enhancement: 5,
   };
@@ -80,12 +80,12 @@ const item1 = {
     });
     describe("get function", () => {
       it("returns an unchanged name if enhancement is 0", () => {
-        const expectedName = "Powerup";
+        const expectedName = "Sniper Rifle";
         const actualOutput = enhancer.get(item7);
         expect(actualOutput.name).toBe(expectedName);
       });
       it("returns a changed name if enhancement is > 0", () => {
-        const expectedName = "[+5] Sword";
+        const expectedName = "[+5] Rocket Launcher";
         const actualOutput = enhancer.get(item8);
         expect(actualOutput.name).toBe(expectedName);
       });
